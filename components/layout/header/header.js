@@ -372,10 +372,10 @@ class Header extends Component {
           </NavigationItem>
           <NavigationItem
             href="/docs/addons"
-            active={router.pathname.startsWith('/docs/addons')}
+            active={router.pathname.startsWith('/docs/integrations')}
             onClick={handleIndexClick}
           >
-            Addons
+            Integrations
           </NavigationItem>
           <span className="desktop_search">{this.renderSearch()}</span>
         </Navigation>

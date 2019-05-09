@@ -1,0 +1,16 @@
+export const meta = {
+  editUrl:
+    'pages/docs/integrations/v2/integrations-docs-mdx/introduction/use-an-integration.mdx',
+  lastEdited: '2019-05-05T19:12:32.000Z'
+}
+
+## How to Use an Integration
+
+- Once you create an Integration, you will get a public URL for it such as <https://zeit.co/integration/my-integration>
+- Any ZEIT user can visit that URL and install it on a user or team account
+- Once installed, the Integration gets a set of pages inside <https://zeit.co>
+- When the user accesses the installation page we call the Integration's UiHook
+- UiHooks are only active while the user is viewing the installation (through a short lived token)
+- Integrations can use the OAuth authorization flow to get a long lived token as well
+
+Let's build our first ZEIT Integration.

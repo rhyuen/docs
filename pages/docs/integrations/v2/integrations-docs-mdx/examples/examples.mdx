@@ -1,0 +1,31 @@
+import Counter from './counter.mdx'
+import BasicForm from './basic-form.mdx'
+import UsingMetadata from './using-metadata.mdx'
+import ConnectWithGithub from './connect-with-github.mdx'
+import RecentDeployments from './recent-deployments.mdx'
+import MongoDbAtlas from './mongodb-atlas.mdx'
+
+export const meta = {
+  editUrl:
+    'pages/docs/integrations/v2/integrations-docs-mdx/examples/examples.mdx',
+  lastEdited: '2019-05-09T14:13:44.000Z'
+}
+
+# Examples
+
+With the previous [getting started](/docs/integrations/#getting-started) section, you should now have a clear idea of how to create a simple Integration. In this section, let's look at a few more examples and see what more you can do with the ZEIT Integrations API.
+
+All of these examples contain a README showing how to run them locally, however most of them follow the below process:
+
+- Create an Integration using the ZEIT dashboard
+- Set the UiHook URI to <http://localhost:5005>
+- Install the Integration
+- Run the Integration's UiHook locally with `now dev -p 5005`
+- Access the Integration installation from the ZEIT dashboard
+
+<Counter />
+<BasicForm />
+<UsingMetadata />
+<ConnectWithGithub />
+<RecentDeployments />
+<MongoDbAtlas />
