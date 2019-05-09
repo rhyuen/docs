@@ -1,16 +1,33 @@
+import { Code } from '~/components/text/code'
+import Note from '~/components/text/note'
+import { P } from '~/components/text/paragraph'
+import { GenericLink } from '~/components/text/link'
+
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/introduction/use-an-integration.mdx',
-  lastEdited: '2019-05-05T19:12:32.000Z'
+  lastEdited: '2019-05-09T17:39:56.000Z'
 }
 
 ## How to Use an Integration
 
-- Once you create an Integration, you will get a public URL for it such as <https://zeit.co/integration/my-integration>
-- Any ZEIT user can visit that URL and install it on a user or team account
-- Once installed, the Integration gets a set of pages inside <https://zeit.co>
-- When the user accesses the installation page we call the Integration's UiHook
-- UiHooks are only active while the user is viewing the installation (through a short lived token)
-- Integrations can use the OAuth authorization flow to get a long lived token as well
+Once you create an Integration, you will receive a public URL for it with the following format:
 
-Let's build our first ZEIT Integration.
+<Code>https://zeit.co/integration/my-integration</Code>
+
+Any ZEIT user can visit that URL and install the Integration to either their user or team account.
+
+Once installed, the Integration receives a set of pages that can be found at the public URL.
+
+When the user accesses the public URL, we call the Integration's [UiHook](/docs/integrations#introduction/what-is-a-uihook) and use the response to create the interface.
+
+<Note>
+  UiHooks are <P.B>only active while the user is viewing the installation</P.B>{' '}
+  through a short lived token - the{' '}
+  <GenericLink href="/docs/integrations#building-oauth-apps/oauth2">
+    OAuth authorization flow
+  </GenericLink>{' '}
+  can be used to receive a long lived token.
+</Note>
+
+Now you know how to use an Integration, let's look at how to build your first ZEIT Integration.

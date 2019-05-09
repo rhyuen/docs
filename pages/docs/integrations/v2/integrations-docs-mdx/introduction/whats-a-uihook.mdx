@@ -1,14 +1,13 @@
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/introduction/whats-a-uihook.mdx',
-  lastEdited: '2019-05-05T19:12:32.000Z'
+  lastEdited: '2019-05-09T17:39:56.000Z'
 }
 
-## What's a UiHook
+## What Is a UiHook
 
-A **UiHook** is the name we use for the HTTP endpoint of an Integration. We use the name **UiHook** because it's similar to a Webhook, but based on user interfaces.
+A UiHook is the name we use for the HTTP endpoint of an Integration. We use the name **UiHook** because it's similar to a Webhook, but based on user interfaces.
 
-- It's another name for a Wehbook
-- It's the name given for the HTTP endpoint of the ZEIT Integration
-- It's another name for a ZEIT Integration
-- It's the name given for the installation of a ZEIT Integration
+The UiHook gets called when the user accesses the Integration, populating the interface with a [Page component](/docs/integrations#component-catalog/page) along with the required information, [inputs](/docs/integrations#component-catalog/input-components) and [actions](/docs/integrations#component-catalog/action-components).
+
+By [using metadata](http://localhost:3000/docs/integrations#using-the-metadata-store), UiHook's are completely dynamic, making use of [clientState](/docs/integrations#understanding-uihooks/http-payload) to understand and deliver the correct user interface.
