@@ -1,0 +1,21 @@
+import Note from '~/components/text/note'
+import { TerminalInput } from '~/components/text/terminal'
+import { Code } from '~/components/text/code'
+import Caption from '~/components/text/caption'
+import { Image } from '~/components/media'
+
+export const meta = {
+  editUrl:
+    'pages/docs/integrations/v2/integrations-docs-mdx/getting-started/testing-the-integration.mdx',
+  lastEdited: '2019-05-09T19:30:48.000Z'
+}
+
+## Testing the Integration
+
+Now you know how to create, develop and install an Integration, it's time to look at how you should test it.
+
+Testing the Integration is simple. With your Integration running locally on port 5005 [using `now dev`](/docs/v2/development/basics), navigate to the [Integrations dashboard](/dashboard/integrations/) and select your Integration from the list of those installed.
+
+You should now see your Integration working exactly as it would do if deployed, **nothing else is required!**
+
+This method of testing applies for **any Integration you create**, by simply using the localhost as the **UI Hook URI**, you can test any Integration in an accurate setting.

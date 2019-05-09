@@ -2,16 +2,17 @@ import Note from '~/components/text/note'
 import { TerminalInput } from '~/components/text/terminal'
 import { InlineCode } from '~/components/text/code'
 import Caption from '~/components/text/caption'
+import { GenericLink } from '~/components/text/link'
 
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/getting-started/create-a-uihook.mdx',
-  lastEdited: '2019-05-09T17:39:56.000Z'
+  lastEdited: '2019-05-09T19:30:48.000Z'
 }
 
 ## Creating a UiHook
 
-The UiHook we will create is a simple counter. It's a good example for understanding how to create your first ZEIT Integration.
+The UiHook you will create is a simple counter. It's a good example for understanding how to create your first ZEIT Integration.
 
 Create an `index.js` file and add the following code:
 
@@ -35,11 +36,27 @@ module.exports = withUiHook(({ payload }) => {
   An example <InlineCode>index.js</InlineCode> file for a ZEIT Integration.
 </Caption>
 
-The code is simple. Inside the UiHook, we increment the count and send JSX response with the current count.
+The counter example is basic but let's take a look at what is happening.
+
+Inside the [UiHook](/docs/integrations#introduction/what-is-a-uihook), there is a variable, `count`. Every time the [Button](/docs/integrations#component-catalog/action-components/button) is clicked, a new JSX response is sent with an incremented `count` value.
+
+<Note>
+  You can find more complex examples{' '}
+  <GenericLink href="/docs/integrations#examples/">
+    later in the documentation
+  </GenericLink>{' '}
+  or you can view the code on the{' '}
+  <GenericLink href="https://github.com/zeit/integrations-gallery">
+    Integrations Gallery
+  </GenericLink>
+  .
+</Note>
 
 ### Running the UiHook Locally
 
-With the [help of `now dev`](/docs/v2/development/basics), you can run your UiHook's locally inside a simulation of the Now platform.
+With the [help of `now dev`](/docs/v2/development/basics), you can run your UiHook locally inside a **simulation of the Now platform**.
+
+By running your UiHook locally, you will be able to test that your Integration behaves as expected before publishing. This will be explored further in the next section.
 
 To run the UiHook locally, use the following command:
 
@@ -47,6 +64,6 @@ To run the UiHook locally, use the following command:
 <Caption>Running the created UiHook on port 5005.</Caption>
 
 <Note>
-  You are free those choose any available port or let{' '}
-  <InlineCode>now dev</InlineCode> use the default port.
+  ZEIT Integrations require port 5005 to be used with
+  <InlineCode>now dev</InlineCode>.
 </Note>

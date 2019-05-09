@@ -2,11 +2,12 @@ import Note from '~/components/text/note'
 import { TerminalInput } from '~/components/text/terminal'
 import { InlineCode } from '~/components/text/code'
 import Caption from '~/components/text/caption'
+import { GenericLink } from '~/components/text/link'
 
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/getting-started/project-setup.mdx',
-  lastEdited: '2019-05-09T17:39:56.000Z'
+  lastEdited: '2019-05-09T19:30:48.000Z'
 }
 
 ## Project Setup
@@ -14,17 +15,28 @@ export const meta = {
 ### Install Node.js and Now CLI
 
 <Note>
-  If you already have the latest stable versions of Node.js and Now CLI. You can
-  skip this process.
+  If you already have the latest stable versions of Node.js and{' '}
+  <GenericLink href="/now">Now CLI</GenericLink>. You can skip this step.
 </Note>
 
-- Download and install Node.js
-- Download and install Now Desktop (which comes with Now CLI)
-- Optionally you can install Now CLI via NPM: `npm install -g now`
+- Download and install [Node.js](https://nodejs.org/en/)
+- Download and install [Now Desktop](/download) (which comes with Now CLI)
 
-### Add package.json
+If you prefer, you can also install the [Now CLI](/now) using your package manager of your choice.
 
-To use modules inside the UiHook, we need to create a `package.json` file. Create one with the following content:
+Using [Yarn](https://yarnpkg.com/):
+
+<TerminalInput>yarn add global now</TerminalInput>
+<Caption>Installing Now globally with Yarn.</Caption>
+
+Using [npm](https://www.npmjs.com/):
+
+<TerminalInput>npm install -g now</TerminalInput>
+<Caption>Installing Now globally with npm.</Caption>
+
+### Add a package.json File
+
+To use modules inside of your UiHook, you need to create a `package.json` file in the **root directory** of your UiHook. Create one with the following content:
 
 ```json
 {
@@ -39,14 +51,23 @@ To use modules inside the UiHook, we need to create a `package.json` file. Creat
   An example <InlineCode>package.json</InlineCode> file for a ZEIT Integration.
 </Caption>
 
-Once you have created your `package.json` file, use the follow command to install the dependencies:
+In the example `package.json` file above, the `@zeit/integration-utils` module is installed, this allows you to use the [Component Catalog](/docs/integrations#component-catalog/page) to create your UiHook.
+
+Once you have created your `package.json` file, use the applicable command below to install the dependencies.
+
+If installed with Yarn:
+
+<TerminalInput>yarn</TerminalInput>
+<Caption>Installing project dependencies with Yarn.</Caption>
+
+If installed with npm:
 
 <TerminalInput>npm install</TerminalInput>
-<Caption>Installing project dependencies.</Caption>
+<Caption>Installing project dependencies with npm.</Caption>
 
 ### Add now.json
 
-Since we will deploy this UiHook to Now, we need to create a `now.json` file to configure the deployment. You can use this as the input when running `now dev` locally.
+Since this UiHook is deployed to Now, a `now.json` file is used to provide minimal configuration for the deployment. You should use a `now.json` file when running your Integration locally with `now dev`.
 
 Create a `now.json` file and add the following content:
 
@@ -62,4 +83,4 @@ Create a `now.json` file and add the following content:
   An example <InlineCode>now.json</InlineCode> file for a ZEIT Integration.
 </Caption>
 
-That's all that is required for the initial project setup, next we will create a UiHook.
+That's all that is required for the initial project setup, next you will create your first UiHook.
