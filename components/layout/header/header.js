@@ -371,7 +371,7 @@ class Header extends Component {
             Examples
           </NavigationItem>
           <NavigationItem
-            href="/docs/addons"
+            href="/docs/integrations"
             active={router.pathname.startsWith('/docs/integrations')}
             onClick={handleIndexClick}
           >
