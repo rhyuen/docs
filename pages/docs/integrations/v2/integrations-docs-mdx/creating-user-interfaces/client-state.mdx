@@ -1,22 +1,27 @@
+import Note from '~/components/text/note'
+import Caption from '~/components/text/caption'
+
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/creating-user-interfaces/client-state.mdx',
-  lastEdited: '2019-05-09T17:39:56.000Z'
+  lastEdited: '2019-05-10T01:21:31.000Z'
 }
 
 ## Client State
 
-Just like actions, you need to be able to accept multiple different inputs from the user. This might include text boxes, password prompts, select boxes - there are many options available.
+Just like actions, you need to be able to accept multiple different inputs from the user. This might include text boxes, password prompts, dropdowns - there are many options available.
 
-This is how we can define a simple input box:
+This is how we can define a simple input field:
 
 ```jsx
 <Input name="username" value="my username" />
 ```
 
+<Caption>An example of a UiHook using an Input component.</Caption>
+
 Now the user can enter a value into this input.
 
-When the user clicks on an action, we combine all of these inputs together into an object called `clientState`. For this example, it would look like this:
+When the user clicks on an action, we combine all of these inputs together into an object called `clientState`. For this example, if just the above input was submitted, the `clientState` would look like this:
 
 ```json
 {
@@ -26,4 +31,4 @@ When the user clicks on an action, we combine all of these inputs together into 
 
 Inside the UiHook you can access this object via `payload.clientState`.
 
-You can discover all supported input components in the [component catalog](https://www.notion.so/zeithq/Available-Components-90262f73b6d84f208bdde5c21f296c4a#1ba2bd9d26654a89b5a73fb2080a215b).
+You can discover all supported input components in the [component catalog](/docs/integrations#component-catalog).

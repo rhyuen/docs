@@ -1,20 +1,20 @@
 export const meta = {
   editUrl:
     'pages/docs/integrations/v2/integrations-docs-mdx/creating-user-interfaces/tokens.mdx',
-  lastEdited: '2019-05-09T17:39:56.000Z'
+  lastEdited: '2019-05-10T01:21:31.000Z'
 }
 
 ## Tokens
 
-Every request to a UiHook will receive a token where it can talk to the ZEIT API for the related account.
+Every request to a UiHook will receive a token which can be used to make requests to the ZEIT API for the related account.
 
-This is a short-lived token. Therefore, you should only use it inside a the UiHook. You **should not use it** inside async task which are executed even after you return the UiHook response.
+This is a **short-lived token**. Therefore, you should only use it inside the UiHook. You **should not use it** inside asynchronous functions which are executed even after you return the UiHook response.
 
-If you need a long-lived token, you can ask for a [OAuth2 token](https://www.notion.so/zeithq/Building-OAuth-Apps-2ff4b3638269466e87e2b1c68337eeb1).
+If you need a **long-lived token**, you can ask for a [OAuth2 token](/docs/integrations#building-oauth-apps/oauth2).
 
 You can access this property inside `payload.token`.
 
-When you use the `@zeit/integration-utils` utility, you do not need to extract this token manually. You will receive an instance called `zeitClient` which is initialized with the above token and account information. You can use that to consume the ZEIT token.
+When you use the `@zeit/integration-utils` utility, you **do not** need to extract this token manually. You will receive an instance called `zeitClient` which is initialized with the above token and account information. You can use that to consume the ZEIT token.
 
 This is how you can get that instance:
 
